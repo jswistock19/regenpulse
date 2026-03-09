@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  Thermometer,
+  Zap,
+  Sun,
+  Gem,
+  Magnet,
+  Wind,
+  Radio,
+  Lightbulb,
+  LampDesk,
+  Sparkles,
+  Activity,
+  type LucideIcon,
+} from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -17,18 +31,18 @@ export const metadata: Metadata = {
   },
 };
 
-const EXOPOD_MODALITIES = [
-  "Advanced Thermal Technology (controlled thermal environment)",
-  "Muscle Stimulation (EMS)",
-  "Infrared Heat",
-  "Himalayan Salt Therapy",
-  "BioAlign (magnetic field therapy)",
-  "Oxygen Therapy (negative ions / air purification)",
-  "DeepWave Energy Therapy",
-  "PhotonGlow Light Therapy (red + near-infrared)",
-  "Ambient Light Therapy",
-  "Ozone Disinfection (hygiene/sterilization system)",
-  "Vibration Pulse Therapy (lymphatic flow)",
+const EXOPOD_MODALITIES: { label: string; icon: LucideIcon }[] = [
+  { label: "Advanced Thermal Technology (controlled thermal environment)", icon: Thermometer },
+  { label: "Muscle Stimulation (EMS)", icon: Zap },
+  { label: "Infrared Heat", icon: Sun },
+  { label: "Himalayan Salt Therapy", icon: Gem },
+  { label: "BioAlign (magnetic field therapy)", icon: Magnet },
+  { label: "Oxygen Therapy (negative ions / air purification)", icon: Wind },
+  { label: "DeepWave Energy Therapy", icon: Radio },
+  { label: "PhotonGlow Light Therapy (red + near-infrared)", icon: Lightbulb },
+  { label: "Ambient Light Therapy", icon: LampDesk },
+  { label: "Ozone Disinfection (hygiene/sterilization system)", icon: Sparkles },
+  { label: "Vibration Pulse Therapy (lymphatic flow)", icon: Activity },
 ];
 
 const EXOPOD_BENEFITS = [
@@ -129,12 +143,15 @@ export default function HbotExopodPage() {
             EXOPOD combines multiple recovery and wellness modalities in one session and membership—so you can get consistent, structured access to technologies designed to support how you feel and perform.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {EXOPOD_MODALITIES.map((mod) => (
+            {EXOPOD_MODALITIES.map(({ label, icon: Icon }) => (
               <div
-                key={mod}
-                className="rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground"
+                key={label}
+                className="flex items-start gap-3 rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground"
               >
-                {mod}
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Icon className="h-4 w-4" aria-hidden />
+                </span>
+                {label}
               </div>
             ))}
           </div>
@@ -238,6 +255,7 @@ export default function HbotExopodPage() {
             <a
               href={`tel:${REALPT.phone}`}
               className="text-lg font-semibold text-primary underline-offset-4 hover:underline"
+              aria-label={`Call ${REALPT.displayPhone}`}
             >
               {REALPT.displayPhone}
             </a>
