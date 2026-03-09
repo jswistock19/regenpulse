@@ -1,48 +1,29 @@
-# REAL PT & Wellness – Copy, Services, and New Pages (Jon Swistock Notes)
+# REAL PT & Wellness – Copy, imagery, and new pages (Jon Swistock notes)
 
-## Plan (summary)
+## Implementation plan (for PR description)
 
-- **Routing:** App Router confirmed; all new routes under `/app`.
-- **Copy:** Lives in components and page `metadata`; no MDX/CMS. Updated layout metadata, hero, explore-features, departments hero, nav, footer, contact.
-- **Nav:** `navigation-2.tsx` — added Services dropdown (Aquatic Therapy, HBOT+EXOPOD, ExoSkin), Partners (Operator–Equity), Veterans; primary CTAs use `lib/realpt.ts`.
-- **Images:** New dirs under `public/images/` (services/swimex, services/hbot-exopod, services/exoskin, veterans/ans). Placeholder used where assets not in repo; replace with brochure/stock as needed.
-- **Services:** No existing `/services/*`; created `/services/aquatic-therapy`, `/services/hbot-exopod`, `/services/exoskin` using existing `PageHero`, `Button`, `Card`, `Footer`.
-- **Config:** `lib/realpt.ts` — phone (386-872-2656), scheduling URL, contact URL, site name. All CTAs reference this.
+- **Routing:** App Router (`/app`). All new/updated pages use existing layout and `PageHero`/`Container`/`Section`/`Button` patterns.
+- **Copy:** Inline in page components and layout; no MDX/CMS. Global positioning updated in `app/layout.tsx`, `components/sections/hero-section.tsx`, `components/layout/footer.tsx`.
+- **Nav:** `components/navigation/navigation-2.tsx` – Services dropdown already includes Aquatic Therapy, HBOT + EXOPOD, ExoSkin; primary links include Partners (`/partners/operator-equity`) and Veterans (`/veterans/ans-program`). No nav changes required.
+- **Config:** `lib/realpt.ts` already has `phone`, `displayPhone`, `schedulingUrl`, `contactUrl`, `membershipsUrl`, `siteName`. All CTAs use these constants.
+- **Images:** New dirs: `public/images/services/swimex/`, `public/images/services/hbot-exopod/`, `public/images/services/exoskin/`, `public/images/veterans/ans/`. README in each explains where to add assets; pages use `next/image` with `/images/placeholder.svg` until real assets are added. Alt text added for all.
+- **Services architecture:** Service pages live under `app/services/[slug]/page.tsx`. Partner and veterans pages under `app/partners/` and `app/veterans/`. Reused existing `PageHero`, `Card`, `Button`, `Footer`.
 
-## Changes
+## Summary of changes
 
-### A) Global positioning
-- Layout default title/description/OG: "REAL PT & Wellness – Physical and Aquatic Therapy"; SwimEx and insurance + cash/membership mentioned.
-- Homepage hero: REAL PT & Wellness headline; SwimEx in-house, PT + aquatic + recovery, insurance + cash/membership.
-- Explore section: "Explore REAL PT & Wellness"; added HBOT + EXOPOD tile; copy tightened.
-- Departments hero: REAL PT & Wellness + SwimEx line.
-- Nav logo/wordmark and footer: REAL PT & Wellness; footer links include new services, partners, veterans.
+- **A) Global repositioning:** Hero, footer, and default metadata now use “REAL PT & Wellness – Physical and Aquatic Therapy,” mention clinical-grade SwimEx® hydrotherapy pool in-house, and PT + aquatic + recovery with insurance when appropriate and cash/membership options.
+- **B) Aquatic Therapy (`/services/aquatic-therapy`):** Hero H1/subhead and CTAs (Book Aquatic PT Evaluation, View Membership Options) confirmed; “Why SwimEx,” use cases grid, integration/payment, pricing teaser ($49.99/mo, higher tiers); membership CTA links to `/memberships#tier-comparison`.
+- **C) HBOT + EXOPOD (`/services/hbot-exopod`):** Hero, HBOT overview (2.0 ATA), pricing table (single 30/60 min + packages, TBD), EXOPOD modalities grid with icons, benefits, tier cards (REAL RESET / PERFORMANCE / ELITE), Getting Started steps, Gaming TV add-on block, phone callout (REAL PT & Wellness + 386-872-2656). Homepage “Explore” section already includes HBOT + EXOPOD tile.
+- **D) ExoSkin (`/services/exoskin`):** Hero “ExoSkin® Body Contouring + Recovery,” feature list (CryoSlimming softened to “many clients report visible contouring over a series of sessions; results vary”), how it works (3 steps), safety callout, What’s Included / Provider Support with training, coaching, warranty, forms, pricing consult.
+- **E) Operator–Equity (`/partners/operator-equity`):** Hero “Operator–Equity Partnership (Not a Franchise),” three differentiators (equity/no franchise fees, PT + aquatic + recovery with insurance + cash, shared tech including Clinix Agent), How it Works timeline, CTA Discuss Partnership. Linked from nav “Partners.”
+- **F) Veterans ANS (`/veterans/ans-program`):** Section IDs: `#veterans-hero`, `#veterans-why-ans`, `#veterans-proof`, `#veterans-how-it-works`, `#veterans-who-for`, `#veterans-application`, `#veterans-cta`. Copy covers Physio PS ANS testing, FDA-cleared, ~15 min, sympathetic/parasympathetic; VA/DoD use (East Orange, Atlanta, Walter Reed, ONR) as “has been used in” / “has supported”; who it’s for (POTS, PTSD-related autonomic, toxic exposures, Long COVID); REAL PT complements VA care, integrates insights, shares reports at request. CTAs: Request ANS Evaluation, Discuss Referral Options. Persistent phone callout block added.
+- **Config:** No new file; `lib/realpt.ts` is the single source for phone, scheduling, and contact URLs.
+- **SEO:** Each new/updated page has `title`, `description`, and `openGraph` where applicable. No placeholder OG images to avoid 404s; add when assets exist.
 
-### B) Aquatic Therapy (SwimEx) – `/services/aquatic-therapy`
-- Hero, dual CTAs (Book Aquatic PT Eval, View Membership Options).
-- "Why SwimEx" (adjustable current, multi-depth, clinical control, true aquatic PT).
-- Use cases grid; integration & payment; pricing teaser $49.99/mo + higher tiers.
-- Image: placeholder (add assets to `public/images/services/swimex/`).
+## QA
 
-### C) HBOT + EXOPOD – `/services/hbot-exopod`
-- Hero, HBOT overview (2.0 ATA chamber), pricing table (TBD placeholders + TODO).
-- EXOPOD modalities grid (all 11); benefits list; 3 tiers (REAL RESET, PERFORMANCE, ELITE) with TBD pricing.
-- Getting Started 1–2–3; Add-On Gaming TV block; phone callout (REAL PT & Wellness, 386-872-2656).
-
-### D) ExoSkin – `/services/exoskin`
-- Hero, feature list (CryoSlimming with softened claim, CryoFacials, chin/cellulite, pain, EMS).
-- How it works (3 steps); safety (monitoring, stop button); What’s Included / Provider Support (training, coaching, warranty, etc.).
-
-### E) Operator–Equity Partnership – `/partners/operator-equity`
-- Hero "Not a Franchise"; 3 differentiators; How it Works timeline; CTA Discuss Partnership.
-- Linked in nav under Partners.
-
-### F) Veterans ANS – `/veterans/ans-program`
-- Section IDs: `#veterans-hero`, `#veterans-why-ans`, `#veterans-proof`, `#veterans-how-it-works`, `#veterans-who-for`, `#veterans-application`, `#veterans-cta`.
-- Copy: Physio PS ANS, FDA-cleared, ~15 min, VA/DoD use (East Orange, Atlanta, Walter Reed, ONR) as “has been used”; POTS, PTSD, toxic exposure, Long COVID; REAL PT complements VA, shares reports at request.
-- CTAs: Request ANS Evaluation, Discuss Referral Options.
-
-### Config & QA
-- `lib/realpt.ts`: phone, displayPhone, schedulingUrl, contactUrl, membershipsUrl, siteName.
-- All new routes build and load; CTAs point to `/contact` or anchors; no `href="#"`.
-- Placeholder image used where real assets not present; replace under `public/images/` as needed.
+- New/updated routes load without errors.
+- Mobile responsive (existing breakpoints).
+- Nav and footer links point to correct URLs.
+- CTAs use `REALPT.schedulingUrl` or `REALPT.contactUrl` (currently `/contact`).
+- No blank `href="#"`; all links are real routes or anchors.
