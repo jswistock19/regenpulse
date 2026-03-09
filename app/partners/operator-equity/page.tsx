@@ -28,7 +28,7 @@ const DIFFERENTIATORS = [
   },
   {
     title: "Shared technology stack",
-    body: "Including Clinix Agent for intake, scheduling, and follow-up—so you can focus on care while operations stay consistent and scalable.",
+    body: "Including Clinix Agent for intake, scheduling, and follow-up—a shared technology stack so you can focus on care while operations stay consistent and scalable.",
   },
 ];
 
