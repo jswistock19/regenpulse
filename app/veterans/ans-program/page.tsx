@@ -91,7 +91,7 @@ export default function VeteransAnsProgramPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-muted">
               <Image
                 src="/images/placeholder.svg"
-                alt="Clinical ANS testing in a respectful, veteran-focused setting"
+                alt="Clinical ANS testing in a respectful, veteran-focused setting—non-invasive autonomic nervous system evaluation."
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -114,9 +114,16 @@ export default function VeteransAnsProgramPage() {
               <Link href={REALPT.contactUrl}>Discuss Referral Options</Link>
             </Button>
           </div>
-          <p className="mt-6 text-sm text-muted-foreground">
-            {REALPT.siteName} — <a href={`tel:${REALPT.phone}`} className="font-medium text-primary underline-offset-4 hover:underline">{REALPT.displayPhone}</a>
-          </p>
+          <div className="mt-8 rounded-xl border border-border bg-primary/5 px-4 py-4 text-center sm:px-6">
+            <p className="text-sm text-muted-foreground">{REALPT.siteName}</p>
+            <a
+              href={`tel:${REALPT.phone}`}
+              className="mt-1 inline-block text-lg font-semibold text-primary underline-offset-4 hover:underline"
+              aria-label={`Call ${REALPT.displayPhone}`}
+            >
+              {REALPT.displayPhone}
+            </a>
+          </div>
         </div>
       </section>
 
