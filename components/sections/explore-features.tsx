@@ -58,19 +58,19 @@ const features: FeatureItem[] = [
     icon: BookOpen,
     title: "REAL University",
     description: "Training and certification pathways for modern regenerative care.",
-    href: "/regen-university",
+    href: "/real-university",
   },
   {
     icon: ShoppingBag,
     title: "REAL Mart",
     description: "Curated products and recovery tools for day-to-day performance.",
-    href: "/regen-mart",
+    href: "/real-mart",
   },
   {
     icon: UtensilsCrossed,
     title: "REAL Fresh",
     description: "Nutrition programs that reinforce better healing and mobility.",
-    href: "/regen-fresh",
+    href: "/real-fresh",
   },
   {
     icon: BadgeDollarSign,

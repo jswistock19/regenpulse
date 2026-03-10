@@ -61,7 +61,7 @@ export default async function MemberDashboardPage() {
               <Link href="/book">Book a visit</Link>
             </Button>
             <Button asChild variant="outline">
-              <Link href="/regen-mart">Regen Mart</Link>
+              <Link href="/real-mart">REAL Mart</Link>
             </Button>
           </CardContent>
         </Card>

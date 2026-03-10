@@ -28,15 +28,15 @@ const LINK_GROUPS = [
     links: [
       { href: "/partners/operator-equity", label: "Operator–Equity Partnership" },
       { href: "/corporate-wellness", label: "Corporate Wellness" },
-      { href: "/regen-university", label: "REAL University" },
+      { href: "/real-university", label: "REAL University" },
       { href: "/government", label: "Government" },
     ],
   },
   {
     title: "Programs & Shop",
     links: [
-      { href: "/regen-fresh", label: "REAL Fresh" },
-      { href: "/regen-mart", label: "REAL Mart" },
+      { href: "/real-fresh", label: "REAL Fresh" },
+      { href: "/real-mart", label: "REAL Mart" },
       { href: "/cost-plus-rx", label: "Cost Plus RX" },
     ],
   },

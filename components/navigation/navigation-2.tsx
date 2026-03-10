@@ -11,7 +11,7 @@ import { REALPT } from "@/lib/realpt";
 const SOLUTIONS_ITEMS = [
   {
     label: "REAL University",
-    href: "/regen-university",
+    href: "/real-university",
     description: "Partner with athletics and university wellness to serve campuses.",
     icon: GraduationCap,
   },

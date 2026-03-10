@@ -159,7 +159,7 @@ export function RegenMartChat() {
                             className="h-8 gap-1 text-xs"
                             asChild
                           >
-                            <Link href={`/regen-mart#product-${p.id}`}>
+                            <Link href={`/real-mart#product-${p.id}`}>
                               <ExternalLink className="h-3 w-3" />
                               View on Mart
                             </Link>

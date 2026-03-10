@@ -25,10 +25,10 @@ export function CheckoutClient() {
         <ShoppingCart className="mx-auto h-12 w-12 text-muted-foreground" />
         <h2 className="mt-4 text-lg font-semibold">Your cart is empty</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Add equipment or products from Regen Mart to checkout.
+          Add equipment or products from REAL Mart to checkout.
         </p>
         <Button asChild className="mt-6">
-          <Link href="/regen-mart">Browse Regen Mart</Link>
+          <Link href="/real-mart">Browse REAL Mart</Link>
         </Button>
       </div>
     );
@@ -60,7 +60,7 @@ export function CheckoutClient() {
         collect items and contact us for orders.
       </p>
       <Button asChild variant="outline">
-        <Link href="/regen-mart">Continue shopping</Link>
+        <Link href="/real-mart">Continue shopping</Link>
       </Button>
     </div>
   );

@@ -45,10 +45,10 @@ export function CartDrawer() {
                 <ShoppingCart className="h-8 w-8 text-muted-foreground" />
               </div>
               <p className="text-sm text-muted-foreground">
-                Your cart is empty. Add equipment or products from Regen Mart.
+                Your cart is empty. Add equipment or products from REAL Mart.
               </p>
               <Button asChild variant="outline" onClick={closeCart}>
-                <Link href="/regen-mart">Browse Regen Mart</Link>
+                <Link href="/real-mart">Browse REAL Mart</Link>
               </Button>
             </div>
           ) : (
@@ -140,7 +140,7 @@ export function CartDrawer() {
                   Tax and shipping calculated at checkout.
                 </p>
                 <Button className="mt-4 w-full" size="lg" asChild>
-                  <Link href="/regen-mart/checkout" onClick={closeCart}>
+                  <Link href="/real-mart/checkout" onClick={closeCart}>
                     Proceed to checkout
                   </Link>
                 </Button>

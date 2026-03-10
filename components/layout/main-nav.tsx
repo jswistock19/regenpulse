@@ -32,9 +32,9 @@ const NAV_LINKS = [
   { href: "/memberships", label: "How It Works" },
   { href: "/partner-network", label: "Partner Network" },
   { href: "/corporate-wellness", label: "Corporate Wellness" },
-  { href: "/regen-university", label: "Regen University" },
-  { href: "/regen-mart", label: "Regen Mart" },
-  { href: "/regen-fresh", label: "Regen Fresh" },
+  { href: "/real-university", label: "REAL University" },
+  { href: "/real-mart", label: "REAL Mart" },
+  { href: "/real-fresh", label: "REAL Fresh" },
   { href: "/cost-plus-rx", label: "Cost Plus RX" },
 ] as const;
 
