@@ -16,7 +16,7 @@ export default function GovernmentPage() {
   return (
     <div className="brand-page min-h-screen overflow-x-hidden">
       <ServiceVideoHero
-        title="Public Sector Wellness | Workforce Health Programs"
+        title="Wellness & Workforce Health for Government"
         description="Wellness and engagement programs for government agencies and public institutions. Compliance-ready, scalable, and built for long-term contracts."
         videoSrc={GOVERNMENT_HERO_VIDEO}
         videoType="video/mp4"

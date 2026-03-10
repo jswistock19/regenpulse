@@ -45,8 +45,8 @@ export default function OperatorEquityPage() {
   return (
     <div className="brand-page min-h-screen overflow-x-hidden">
       <ServiceVideoHero
-        title="Operator–Equity Partnership (Not a Franchise)"
-        description="Build with us as an equity partner—PT, aquatic therapy, and recovery with shared technology and no franchise fees."
+        title="Operator–Equity Partnership"
+        description="Not a franchise—build with us as an equity partner. PT, aquatic therapy, and recovery with shared technology and no franchise fees."
         videoSrc={OPERATOR_EQUITY_HERO_VIDEO}
         videoType="video/mp4"
       >
