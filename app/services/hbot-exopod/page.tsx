@@ -21,6 +21,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { REALPT } from "@/lib/realpt";
 
 const HBOT_HERO_VIDEO = "/videos/oxygen-bubbles-hero.mov";
+const HBOT_HERO_FALLBACK_MP4 = "/videos/pool-water-hero.mp4";
 
 export const metadata: Metadata = {
   title: "HBOT + EXOPOD Memberships | REAL PT & Wellness",
@@ -76,6 +77,8 @@ export default function HbotExopodPage() {
         description="Stacked recovery modalities designed to support performance, recovery, and wellness."
         videoSrc={HBOT_HERO_VIDEO}
         videoType="video/quicktime"
+        fallbackVideoSrc={HBOT_HERO_FALLBACK_MP4}
+        fallbackVideoType="video/mp4"
       >
         <Link
           href={REALPT.schedulingUrl}

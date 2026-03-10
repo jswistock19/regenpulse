@@ -7,6 +7,9 @@ type ServiceVideoHeroProps = {
   description: string;
   videoSrc: string;
   videoType?: string;
+  /** MP4 fallback for browsers that don't support .mov (e.g. Chrome). Rendered as second <source>. */
+  fallbackVideoSrc?: string;
+  fallbackVideoType?: string;
   children?: React.ReactNode;
 };
 
@@ -15,6 +18,8 @@ export function ServiceVideoHero({
   description,
   videoSrc,
   videoType = "video/mp4",
+  fallbackVideoSrc,
+  fallbackVideoType = "video/mp4",
   children,
 }: ServiceVideoHeroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -23,7 +28,7 @@ export function ServiceVideoHero({
     const video = videoRef.current;
     if (!video) return;
     video.play().catch(() => {});
-  }, [videoSrc]);
+  }, [videoSrc, fallbackVideoSrc]);
 
   return (
     <section className="relative flex min-h-[70vh] flex-col overflow-hidden pt-20 sm:min-h-[80vh] md:min-h-[100svh]">
@@ -39,6 +44,9 @@ export function ServiceVideoHero({
           aria-hidden
         >
           <source src={videoSrc} type={videoType} />
+          {fallbackVideoSrc ? (
+            <source src={fallbackVideoSrc} type={fallbackVideoType} />
+          ) : null}
         </video>
         <div
           className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/40"

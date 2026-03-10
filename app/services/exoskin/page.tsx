@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { REALPT } from "@/lib/realpt";
 
 const EXOSKIN_HERO_VIDEO = "/videos/oxygen-bubbles-hero.mov";
+const EXOSKIN_HERO_FALLBACK_MP4 = "/videos/pool-water-hero.mp4";
 
 export const metadata: Metadata = {
   title: "ExoSkin Body Contouring + Recovery | REAL PT & Wellness",
@@ -58,6 +59,8 @@ export default function ExoskinPage() {
         description="CryoSlimming, CryoFacials, EMS toning, and pain management with real-time monitoring and safety controls."
         videoSrc={EXOSKIN_HERO_VIDEO}
         videoType="video/quicktime"
+        fallbackVideoSrc={EXOSKIN_HERO_FALLBACK_MP4}
+        fallbackVideoType="video/mp4"
       >
         <Link
           href={REALPT.schedulingUrl}

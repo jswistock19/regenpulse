@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { REALPT } from "@/lib/realpt";
 
 const VETERANS_HERO_VIDEO = "/videos/veterans-hero.mov";
+const VETERANS_HERO_FALLBACK_MP4 = "/videos/pool-water-hero.mp4";
 
 export const metadata: Metadata = {
   title: "Veterans ANS Program | REAL PT & Wellness",
@@ -28,6 +29,8 @@ export default function VeteransAnsProgramPage() {
           description="Autonomic nervous system testing that has been used in VA and DoD settings—integrated into your PT and recovery plan."
           videoSrc={VETERANS_HERO_VIDEO}
           videoType="video/quicktime"
+          fallbackVideoSrc={VETERANS_HERO_FALLBACK_MP4}
+          fallbackVideoType="video/mp4"
         >
           <Link
             href={REALPT.schedulingUrl}
