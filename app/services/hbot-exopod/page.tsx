@@ -129,7 +129,7 @@ export default function HbotExopodPage() {
             className="h-full w-full object-cover"
             aria-hidden
           >
-            <source src="/videos/memberships-hero.mp4" type="video/mp4" />
+            <source src="/videos/pool-water-hero.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/70 via-neutral-950/40 to-neutral-950/80" />
         </div>
