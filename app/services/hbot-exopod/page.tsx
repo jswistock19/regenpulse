@@ -63,9 +63,49 @@ const EXOPOD_BENEFITS = [
 ];
 
 const TIERS = [
-  { name: "REAL RESET", summary: "Entry-level access to EXOPOD modalities and recovery support.", price: "TBD" },
-  { name: "REAL PERFORMANCE", summary: "More sessions and broader access for active recovery and performance.", price: "TBD" },
-  { name: "REAL ELITE", summary: "Premium access with maximum sessions and priority booking.", price: "TBD" },
+  {
+    name: "REAL STARTER",
+    price: "$99",
+    summary: "1 EXOPOD session/mo, 10% off add-ons, member-only booking access.",
+    services: ["1 EXOPOD session", "10% off add-ons", "Online booking access"],
+  },
+  {
+    name: "REAL RECOVERY",
+    price: "$250",
+    summary: "2 HBOT + 2 EXOPOD sessions/mo, grounding therapy, 15% off all services.",
+    services: ["2 HBOT sessions", "2 EXOPOD sessions", "Grounding therapy", "15% off services"],
+  },
+  {
+    name: "REAL PERFORMANCE",
+    price: "$500",
+    summary: "4 HBOT + 4 EXOPOD sessions, red light therapy, quarterly wellness assessment.",
+    services: ["4 HBOT sessions", "4 EXOPOD sessions", "Red light therapy", "Wellness assessment"],
+    popular: true,
+  },
+  {
+    name: "REAL VITALITY",
+    price: "$750",
+    summary: "6 HBOT + 6 EXOPOD sessions, IV therapy session, priority scheduling.",
+    services: ["6 HBOT sessions", "6 EXOPOD sessions", "1 IV therapy session", "Priority scheduling"],
+  },
+  {
+    name: "REAL ELITE",
+    price: "$1,000",
+    summary: "8 HBOT + 8 EXOPOD sessions, cryotherapy, dedicated wellness concierge.",
+    services: ["8 HBOT sessions", "8 EXOPOD sessions", "2 cryotherapy sessions", "Wellness concierge"],
+  },
+  {
+    name: "REAL PREMIUM",
+    price: "$1,500",
+    summary: "12 HBOT + unlimited EXOPOD, IV therapy, all add-ons included, guest passes.",
+    services: ["12 HBOT sessions", "Unlimited EXOPOD", "2 IV therapy sessions", "All add-ons included", "2 guest passes/mo"],
+  },
+  {
+    name: "REAL UNLIMITED",
+    price: "$1,800",
+    summary: "Unlimited HBOT + EXOPOD, full add-on access, concierge care, family sharing.",
+    services: ["Unlimited HBOT", "Unlimited EXOPOD", "Full add-on access", "Concierge care", "Family sharing (2 members)"],
+  },
 ];
 
 const GETTING_STARTED = [
@@ -210,25 +250,35 @@ export default function HbotExopodPage() {
                 </thead>
                 <tbody className="text-slate-400">
                   <tr className="border-b border-white/10">
-                    <td className="px-4 py-3 sm:px-6">Single session</td>
-                    <td className="px-4 py-3 sm:px-6">30 min</td>
-                    <td className="px-4 py-3 sm:px-6">TBD</td>
+                    <td className="px-4 py-3 sm:px-6">Single Session</td>
+                    <td className="px-4 py-3 sm:px-6">60 min</td>
+                    <td className="px-4 py-3 font-semibold text-white sm:px-6">$300</td>
                   </tr>
                   <tr className="border-b border-white/10">
-                    <td className="px-4 py-3 sm:px-6">Single session</td>
-                    <td className="px-4 py-3 sm:px-6">60 min</td>
-                    <td className="px-4 py-3 sm:px-6">TBD</td>
+                    <td className="px-4 py-3 sm:px-6">Single Session</td>
+                    <td className="px-4 py-3 sm:px-6">90 min</td>
+                    <td className="px-4 py-3 font-semibold text-white sm:px-6">$400</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="px-4 py-3 sm:px-6">10-Session Pack</td>
+                    <td className="px-4 py-3 sm:px-6">60 min each</td>
+                    <td className="px-4 py-3 font-semibold text-white sm:px-6">$2,500 <span className="text-xs font-normal text-cyan-400">($250/session)</span></td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="px-4 py-3 sm:px-6">20-Session Pack</td>
+                    <td className="px-4 py-3 sm:px-6">60 min each</td>
+                    <td className="px-4 py-3 font-semibold text-white sm:px-6">$4,000 <span className="text-xs font-normal text-cyan-400">($200/session)</span></td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 sm:px-6">Packages</td>
-                    <td className="px-4 py-3 sm:px-6">30 min / 60 min</td>
-                    <td className="px-4 py-3 sm:px-6">TBD</td>
+                    <td className="px-4 py-3 sm:px-6">40-Session Pack</td>
+                    <td className="px-4 py-3 sm:px-6">60 min each</td>
+                    <td className="px-4 py-3 font-semibold text-white sm:px-6">$6,000 <span className="text-xs font-normal text-cyan-400">($150/session)</span></td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="px-4 py-2 text-xs text-slate-500 sm:px-6">
-              Contact us for current single-session and package pricing.
+              Pricing based on national averages for medical-grade hardshell HBOT. Packages do not expire.
             </p>
           </div>
         </div>
@@ -340,23 +390,48 @@ export default function HbotExopodPage() {
       <section id="membership-tiers" className="scroll-mt-6 border-t border-white/10 bg-gradient-to-b from-neutral-900 to-neutral-950">
         <div className="container mx-auto px-4 py-14 sm:px-6 md:py-20">
           <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-            EXOPOD Membership Tiers
+            Membership Tiers
           </h2>
           <p className="mt-3 max-w-2xl text-slate-400">
-            Choose the level that matches your goals. Exact pricing and session counts available when you book.
+            Seven tiers mixing HBOT, EXOPOD, and wellness services. Pick the level that fits your goals and budget.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {TIERS.map((tier) => (
               <div
                 key={tier.name}
-                className="rounded-2xl border border-white/10 bg-neutral-900 p-6 transition-colors hover:border-cyan-500/30"
+                className={`rounded-2xl border p-5 transition-colors ${
+                  (tier as any).popular
+                    ? "border-cyan-500/40 bg-gradient-to-b from-cyan-500/10 to-neutral-900 ring-1 ring-cyan-500/20"
+                    : "border-white/10 bg-neutral-900 hover:border-cyan-500/30"
+                }`}
               >
-                <h3 className="text-xl font-semibold text-white">{tier.name}</h3>
-                <p className="mt-1 text-sm text-slate-400">{tier.summary}</p>
-                <p className="mt-4 text-lg font-semibold text-cyan-400">Starting at {tier.price}/mo</p>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold text-white">{tier.name}</h3>
+                  {(tier as any).popular && (
+                    <span className="rounded-full bg-cyan-500/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan-400">
+                      Popular
+                    </span>
+                  )}
+                </div>
+                <p className="mt-2 text-2xl font-bold text-white">
+                  {tier.price}<span className="text-sm font-normal text-slate-400">/mo</span>
+                </p>
+                <p className="mt-2 text-xs leading-relaxed text-slate-400">{tier.summary}</p>
+                <ul className="mt-3 space-y-1.5">
+                  {tier.services.map((s) => (
+                    <li key={s} className="flex items-start gap-2 text-xs text-slate-300">
+                      <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-cyan-400" aria-hidden />
+                      {s}
+                    </li>
+                  ))}
+                </ul>
                 <Link
                   href={REALPT.schedulingUrl}
-                  className="mt-4 block w-full rounded-xl bg-cyan-500/10 py-2.5 text-center text-sm font-semibold text-cyan-400 transition-colors hover:bg-cyan-500/20"
+                  className={`mt-4 block w-full rounded-xl py-2.5 text-center text-sm font-semibold transition-colors ${
+                    (tier as any).popular
+                      ? "bg-cyan-500 text-white hover:bg-cyan-400"
+                      : "bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20"
+                  }`}
                 >
                   Get Started
                 </Link>

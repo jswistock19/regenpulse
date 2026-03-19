@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function MembershipsPage() {
   return (
-    <div className="brand-page">
+    <div className="brand-page min-h-screen overflow-x-hidden bg-neutral-950">
       <MembershipsVideoHero />
       <MembershipComparison />
       <PricingMemberships ctaHrefOverride="/contact" showDepartmentAccess={false} />

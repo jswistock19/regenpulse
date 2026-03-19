@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function CorporateWellnessPage() {
   return (
-    <div className="brand-page min-h-screen overflow-x-hidden">
+    <div className="brand-page min-h-screen overflow-x-hidden bg-neutral-950">
       <ServiceVideoHero
         title="Employer programs that drive engagement, reduce claims, and close in 30 days."
         description="Boost participation, integrate with your benefits, and get ROI projections—with a structured rollout from audit to contract."
