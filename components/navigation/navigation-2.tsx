@@ -12,7 +12,7 @@ import { REALPT } from "@/lib/realpt";
 
 const SERVICES_MEGA = [
   {
-    category: "Clinical Revenue",
+    category: "Clinical Services",
     items: [
       { label: "Medicare Home Health PT & OT", href: "/" },
       { label: "In-Clinic Physical Therapy", href: "/" },
@@ -56,7 +56,7 @@ const SERVICES_MEGA = [
     ],
   },
   {
-    category: "SaaS, Platform, & Partner Revenue",
+    category: "Digital & Community",
     items: [
       { label: "CLINIX Megabilling SaaS", href: "/" },
       { label: "Device Leasing & E-Commerce", href: "/" },
