@@ -6,10 +6,10 @@ import { Footer } from "@/components/layout/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden text-foreground">
+    <div className="min-h-screen overflow-x-hidden bg-neutral-950 text-foreground">
       <HeroSection />
-      <KeyPartners />
       <TrustFooter />
+      <KeyPartners />
       <ExploreFeaturesSection />
       <Footer />
     </div>
