@@ -69,17 +69,19 @@ const GETTING_STARTED = [
 export default function HbotExopodPage() {
   return (
     <div className="brand-page min-h-screen overflow-x-hidden">
-      {/* Hero — Everyday Hyperbaric chamber image */}
+      {/* Hero — oxygen bubbles video */}
       <section className="relative flex min-h-[70vh] flex-col overflow-hidden pt-20 sm:min-h-[80vh] md:min-h-[100svh]">
         <div className="absolute inset-0 z-0 bg-neutral-900">
-          <Image
-            src="/images/services/hbot-exopod/everyday-hbot-clinic-web.jpg"
-            alt="Everyday Hyperbaric chamber at REAL PT & Wellness"
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-full w-full object-cover"
+            aria-hidden="true"
+          >
+            <source src="/videos/oxygen-bubbles-hero.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/40" />
         </div>
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-24 text-center sm:py-28 md:items-start md:px-12 md:py-32 md:text-left lg:px-16 xl:px-24">

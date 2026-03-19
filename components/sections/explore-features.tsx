@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Activity,
@@ -83,19 +84,16 @@ const features: FeatureItem[] = [
 export function ExploreFeaturesSection() {
   return (
     <section className="relative overflow-hidden bg-neutral-950 py-16 md:py-20">
-      {/* Background video — oxygen bubbles */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="h-full w-full object-cover"
-          aria-hidden="true"
-        >
-          <source src="/videos/oxygen-bubbles-hero.mp4" type="video/mp4" />
-        </video>
-      </div>
+      {/* Background image — Everyday Hyperbaric chamber */}
+      <Image
+        src="/images/services/hbot-exopod/everyday-hbot-clinic-web.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        sizes="100vw"
+        priority={false}
+        aria-hidden="true"
+      />
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/90 via-neutral-950/75 to-neutral-950/85" aria-hidden="true" />
 
