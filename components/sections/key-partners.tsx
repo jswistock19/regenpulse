@@ -64,12 +64,12 @@ export function KeyPartners() {
   const items = [...PARTNERS, ...PARTNERS];
 
   return (
-    <section className="overflow-hidden bg-neutral-950 pt-12 md:pt-16">
+    <section className="overflow-hidden bg-gradient-to-b from-slate-50 to-white pt-12 md:pt-16">
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="text-center font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h2 className="text-center font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Key Partners
         </h2>
-        <p className="mx-auto mt-3 max-w-3xl text-center text-slate-400">
+        <p className="mx-auto mt-3 max-w-3xl text-center text-slate-500">
           World-class technology and clinical partners powering recovery,
           performance, and accessible care.
         </p>
@@ -78,8 +78,8 @@ export function KeyPartners() {
       {/* Infinite scroll carousel */}
       <div className="relative mt-10 w-full md:mt-12">
         {/* Left/right fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-neutral-950 to-transparent sm:w-24" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-neutral-950 to-transparent sm:w-24" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-slate-50 to-transparent sm:w-24" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent sm:w-24" />
 
         <div className="flex animate-scroll-left pb-10">
           {items.map((partner, i) => (
@@ -92,9 +92,9 @@ export function KeyPartners() {
                   ? "noopener noreferrer"
                   : undefined
               }
-              className="group mx-3 flex w-[280px] shrink-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10 sm:mx-4 sm:w-[320px]"
+              className="group mx-3 flex w-[280px] shrink-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:border-slate-300 hover:shadow-md sm:mx-4 sm:w-[320px]"
             >
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-800">
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
                 <Image
                   src={partner.image}
                   alt={partner.name}
@@ -104,10 +104,10 @@ export function KeyPartners() {
                 />
               </div>
               <div className="px-5 py-4">
-                <h3 className="text-base font-semibold text-white">
+                <h3 className="text-base font-semibold text-slate-900">
                   {partner.name}
                 </h3>
-                <p className="mt-1 text-sm text-slate-400">
+                <p className="mt-1 text-sm text-slate-500">
                   {partner.description}
                 </p>
               </div>
