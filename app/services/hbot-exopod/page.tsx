@@ -161,16 +161,14 @@ export default function HbotExopodPage() {
       {/* Hero — wellness video background */}
       <section className="relative flex min-h-[70vh] flex-col overflow-hidden pt-20 sm:min-h-[80vh] md:min-h-[100svh]">
         <div className="absolute inset-0 z-0 bg-neutral-950">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="h-full w-full object-cover"
-            aria-hidden
-          >
-            <source src="/videos/pool-water-hero.mp4" type="video/mp4" />
-          </video>
+          <Image
+            src="/images/services/hbot-exopod/everyday-hbot-sanctuary.png"
+            alt="HBOT treatment sanctuary at REAL PT & Wellness"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/70 via-neutral-950/40 to-neutral-950/80" />
         </div>
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-24 text-center sm:py-28 md:items-start md:px-12 md:py-32 md:text-left lg:px-16 xl:px-24">

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-const HERO_VIDEO_SRC = "/videos/memberships-hero.mp4";
+const HERO_VIDEO_SRC = "/videos/pool-water-hero.mp4";
 
 function scrollToTierComparison() {
   const el = document.getElementById("tier-comparison");
