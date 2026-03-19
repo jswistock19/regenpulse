@@ -202,30 +202,30 @@ export default function AquaticTherapyPage() {
         </div>
       </section>
 
-      {/* ───── STATS BAR (soft blue-gray) ───── */}
-      <section className="border-b border-slate-200 bg-gradient-to-b from-slate-100 to-white">
+      {/* ───── STATS BAR ───── */}
+      <section className="border-b border-white/10 bg-neutral-900/80">
         <div className="mx-auto grid w-full max-w-5xl grid-cols-2 gap-4 px-4 py-8 sm:px-6 lg:grid-cols-4">
           {STATS.map(({ value, label }) => (
             <div key={label} className="text-center">
-              <p className="text-2xl font-bold text-sky-700 sm:text-3xl">{value}</p>
-              <p className="mt-1 text-xs font-medium text-slate-500 sm:text-sm">{label}</p>
+              <p className="text-2xl font-bold text-cyan-400 sm:text-3xl">{value}</p>
+              <p className="mt-1 text-xs font-medium text-slate-400 sm:text-sm">{label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ───── WHY SWIMEX IS DIFFERENT (light) ───── */}
-      <section className="bg-white py-20 md:py-24">
+      {/* ───── WHY SWIMEX IS DIFFERENT ───── */}
+      <section className="bg-neutral-950 py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <p className="text-sm font-medium uppercase tracking-wider text-sky-600">
+              <p className="text-sm font-medium uppercase tracking-wider text-cyan-400">
                 Why SwimEx
               </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 Not Just a Pool — A Clinical Instrument
               </h2>
-              <p className="mt-4 text-slate-600 leading-relaxed">
+              <p className="mt-4 text-slate-300 leading-relaxed">
                 SwimEx is a professional-grade hydrotherapy system trusted by hospitals, sports teams, and PT clinics worldwide. The laminar paddlewheel current creates an even flow so your body gets consistent support and resistance — not choppy jets.
               </p>
               <div className="mt-8 space-y-6">
@@ -233,12 +233,12 @@ export default function AquaticTherapyPage() {
                   const Icon = item.icon;
                   return (
                     <div key={item.title} className="flex gap-4">
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-sky-200 bg-sky-50">
-                        <Icon className="h-5 w-5 text-sky-600" />
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10">
+                        <Icon className="h-5 w-5 text-cyan-400" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-slate-900">{item.title}</h3>
-                        <p className="mt-1 text-sm text-slate-500 leading-relaxed">{item.description}</p>
+                        <h3 className="font-semibold text-white">{item.title}</h3>
+                        <p className="mt-1 text-sm text-slate-400 leading-relaxed">{item.description}</p>
                       </div>
                     </div>
                   );
@@ -246,7 +246,7 @@ export default function AquaticTherapyPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-200 shadow-xl">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 shadow-xl">
                 <Image
                   src="/images/swimex/triton-pro.jpg"
                   alt="SwimEx Triton therapy pool — clinical-grade hydrotherapy"
@@ -255,7 +255,7 @@ export default function AquaticTherapyPage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 hidden aspect-[4/3] w-48 overflow-hidden rounded-xl border-2 border-white shadow-2xl md:block">
+              <div className="absolute -bottom-6 -left-6 hidden aspect-[4/3] w-48 overflow-hidden rounded-xl border-2 border-neutral-800 shadow-2xl md:block">
                 <Image
                   src="/images/swimex/therapy-session.jpg"
                   alt="Therapist guiding patient in SwimEx pool"
@@ -288,8 +288,8 @@ export default function AquaticTherapyPage() {
         </div>
       </section>
 
-      {/* ───── MOVE EARLIER WITH LESS PAIN (soft blue tint) ───── */}
-      <section className="bg-gradient-to-b from-slate-50 to-white py-20 md:py-24">
+      {/* ───── MOVE EARLIER WITH LESS PAIN ───── */}
+      <section className="bg-neutral-900 py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl lg:order-first">
@@ -302,20 +302,20 @@ export default function AquaticTherapyPage() {
               />
             </div>
             <div>
-              <p className="text-sm font-medium uppercase tracking-wider text-sky-600">
+              <p className="text-sm font-medium uppercase tracking-wider text-cyan-400">
                 How Aquatic PT Helps
               </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 Move Earlier, With Less Pain
               </h2>
-              <p className="mt-4 text-slate-600 leading-relaxed">
+              <p className="mt-4 text-slate-300 leading-relaxed">
                 SwimEx aquatic therapy reduces how much weight your joints have to carry, so you can stand, walk, and exercise sooner. Warm water relaxes tight muscles, improves circulation, and makes it easier to work on motion, strength, and balance without flaring your symptoms.
               </p>
               <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {CONDITIONS.map((condition) => (
                   <div key={condition} className="flex items-start gap-2.5">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-sky-600" />
-                    <span className="text-sm text-slate-700">{condition}</span>
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />
+                    <span className="text-sm text-slate-300">{condition}</span>
                   </div>
                 ))}
               </div>
@@ -373,18 +373,18 @@ export default function AquaticTherapyPage() {
         </div>
       </section>
 
-      {/* ───── PERFORMANCE & RECOVERY (light) ───── */}
-      <section className="bg-white py-20 md:py-24">
+      {/* ───── PERFORMANCE & RECOVERY ───── */}
+      <section className="bg-neutral-950 py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <p className="text-sm font-medium uppercase tracking-wider text-sky-600">
+              <p className="text-sm font-medium uppercase tracking-wider text-cyan-400">
                 Beyond Rehab
               </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 Performance & Recovery, Too
               </h2>
-              <p className="mt-4 text-slate-600 leading-relaxed">
+              <p className="mt-4 text-slate-300 leading-relaxed">
                 SwimEx isn&apos;t only for injuries. Athletes and active adults use it to train harder with less joint stress and recover faster between tough sessions.
               </p>
               <div className="mt-8 space-y-4">
@@ -397,10 +397,10 @@ export default function AquaticTherapyPage() {
                   const Icon = item.icon;
                   return (
                     <div key={item.text} className="flex items-start gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-sky-50 border border-sky-200">
-                        <Icon className="h-4 w-4 text-sky-600" />
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 border border-cyan-500/30">
+                        <Icon className="h-4 w-4 text-cyan-400" />
                       </div>
-                      <span className="text-slate-700 leading-relaxed">{item.text}</span>
+                      <span className="text-slate-300 leading-relaxed">{item.text}</span>
                     </div>
                   );
                 })}
@@ -483,16 +483,16 @@ export default function AquaticTherapyPage() {
         </div>
       </section>
 
-      {/* ───── SAFETY & DESIGN (light) ───── */}
-      <section className="bg-gradient-to-b from-slate-50 to-white py-16 md:py-20">
+      {/* ───── SAFETY & DESIGN ───── */}
+      <section className="bg-neutral-900 py-16 md:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg sm:p-10 md:p-12">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-8 shadow-lg backdrop-blur-sm sm:p-10 md:p-12">
             <div className="text-center">
-              <Shield className="mx-auto h-8 w-8 text-sky-600" />
-              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+              <Shield className="mx-auto h-8 w-8 text-cyan-400" />
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                 Built for Safety, Comfort & Clinical Results
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-slate-500">
+              <p className="mx-auto mt-4 max-w-2xl text-slate-400">
                 Our SwimEx setup is designed like a professional hydrotherapy room with every detail considered for patient safety and therapist access.
               </p>
             </div>
@@ -503,8 +503,8 @@ export default function AquaticTherapyPage() {
                 { title: "Worldwide Standard", desc: "Designed for clinics, rehab centers, and sports facilities across the globe since 1986." },
               ].map((item) => (
                 <div key={item.title} className="text-center">
-                  <h3 className="font-semibold text-slate-900">{item.title}</h3>
-                  <p className="mt-2 text-sm text-slate-500">{item.desc}</p>
+                  <h3 className="font-semibold text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm text-slate-400">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -512,17 +512,17 @@ export default function AquaticTherapyPage() {
         </div>
       </section>
 
-      {/* ───── PRICING (light with cards) ───── */}
-      <section className="bg-white py-20 md:py-24">
+      {/* ───── PRICING ───── */}
+      <section className="bg-neutral-950 py-20 md:py-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <div className="text-center">
-            <p className="text-sm font-medium uppercase tracking-wider text-sky-600">
+            <p className="text-sm font-medium uppercase tracking-wider text-cyan-400">
               Memberships
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               SwimEx Memberships & Pricing
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-slate-500">
+            <p className="mx-auto mt-4 max-w-2xl text-slate-400">
               One-time evaluation required before starting. Insurance-based PT visits and cash memberships available side by side.
             </p>
           </div>
@@ -533,24 +533,24 @@ export default function AquaticTherapyPage() {
                 key={tier.name}
                 className={`relative rounded-2xl border p-7 transition-shadow hover:shadow-lg ${
                   tier.featured
-                    ? "border-sky-300 bg-sky-50/50 shadow-md"
-                    : "border-slate-200 bg-white"
+                    ? "border-cyan-500/40 bg-cyan-500/10 shadow-md"
+                    : "border-white/10 bg-white/[0.04]"
                 }`}
               >
                 {tier.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-sky-600 px-3 py-0.5 text-xs font-semibold text-white">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-3 py-0.5 text-xs font-semibold text-neutral-950">
                     Most Popular
                   </span>
                 )}
-                <h3 className="text-lg font-semibold text-slate-900">{tier.name}</h3>
+                <h3 className="text-lg font-semibold text-white">{tier.name}</h3>
                 <div className="mt-3">
-                  <span className="text-3xl font-bold text-slate-900">{tier.price}</span>
-                  <span className="text-slate-500">{tier.period}</span>
+                  <span className="text-3xl font-bold text-white">{tier.price}</span>
+                  <span className="text-slate-400">{tier.period}</span>
                 </div>
                 <ul className="mt-6 space-y-3">
                   {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2.5 text-sm text-slate-600">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-sky-600" />
+                    <li key={feature} className="flex items-start gap-2.5 text-sm text-slate-300">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />
                       {feature}
                     </li>
                   ))}
@@ -559,8 +559,8 @@ export default function AquaticTherapyPage() {
                   href={tier.price === "$49.99" ? REALPT.membershipsUrl : REALPT.contactUrl}
                   className={`mt-6 flex w-full items-center justify-center rounded-xl py-3 text-sm font-semibold transition-all ${
                     tier.featured
-                      ? "bg-sky-600 text-white hover:bg-sky-700 shadow-md"
-                      : "border border-slate-300 bg-slate-50 text-slate-900 hover:bg-slate-100"
+                      ? "bg-cyan-500 text-neutral-950 hover:bg-cyan-400 shadow-md"
+                      : "border border-white/20 bg-white/5 text-white hover:bg-white/10"
                   }`}
                 >
                   {tier.cta}
@@ -569,7 +569,7 @@ export default function AquaticTherapyPage() {
             ))}
           </div>
 
-          <p className="mt-8 text-center text-sm text-slate-400">
+          <p className="mt-8 text-center text-sm text-slate-500">
             We also accept Medicare Part B, major PPO plans, and provide superbills for HSA/FSA reimbursement.
           </p>
         </div>

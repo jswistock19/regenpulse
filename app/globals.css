@@ -153,10 +153,10 @@
     @apply bg-background text-foreground antialiased m-0 p-0;
     background-image: radial-gradient(
         1200px 420px at 50% -140px,
-        color-mix(in oklch, var(--brand-cyan) 16%, transparent),
+        color-mix(in oklch, var(--brand-cyan) 8%, transparent),
         transparent
       ),
-      linear-gradient(to bottom, color-mix(in oklch, var(--surface-1) 96%, transparent), var(--background));
+      linear-gradient(to bottom, var(--background), var(--background));
   }
 
   h1,

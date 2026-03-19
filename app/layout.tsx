@@ -83,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${brandSans.variable} ${brandDisplay.variable} ${geistMono.variable} min-h-screen overflow-x-hidden antialiased`}
       >
