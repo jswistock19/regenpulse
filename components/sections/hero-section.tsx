@@ -25,7 +25,7 @@ export function HeroSection() {
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-neutral-950/95" />
       </div>
 
       {/* Content block */}
@@ -40,7 +40,7 @@ export function HeroSection() {
       </div>
 
       {/* Metric bar */}
-      <div className="border-t border-white/20 bg-black/45">
+      <div className="border-t border-white/15 bg-neutral-950/90">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-4 py-5 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
           {metrics.map(({ value, label }) => (
             <div

@@ -23,15 +23,15 @@ export function TrustFooter() {
   const [liveChatOpen, setLiveChatOpen] = useState(false);
 
   return (
-    <footer className="border-t border-border bg-[color:var(--surface-2)]">
+    <footer className="border-t border-white/10 bg-neutral-900">
       <div className="container mx-auto px-4 py-10 md:py-12">
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
           {TRUST_BADGES.map((label) => (
             <div
               key={label}
-              className="flex items-center gap-2 text-sm font-medium text-foreground"
+              className="flex items-center gap-2 text-sm font-medium text-slate-200"
             >
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-500/15 text-cyan-400">
                 <Check className="h-3.5 w-3.5" aria-hidden />
               </span>
               {label}
@@ -43,7 +43,7 @@ export function TrustFooter() {
           <Button
             size="lg"
             variant="outline"
-            className="gap-2"
+            className="gap-2 border-white/20 bg-white/5 text-white hover:bg-white/15 hover:text-white"
             onClick={() => setLiveChatOpen(true)}
           >
             <MessageCircle className="h-5 w-5" aria-hidden />
@@ -51,7 +51,7 @@ export function TrustFooter() {
           </Button>
         </div>
 
-        <p className="mt-8 text-center text-sm text-muted-foreground max-w-2xl mx-auto">
+        <p className="mt-8 text-center text-sm text-slate-400 max-w-2xl mx-auto">
           We bill Medicare Part B, major PPO plans, and provide superbills for
           HSA/FSA reimbursement.
         </p>

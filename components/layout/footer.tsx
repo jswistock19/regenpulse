@@ -68,11 +68,11 @@ const currentYear = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-[color:var(--surface-2)]">
+    <footer className="border-t border-white/10 bg-neutral-950">
       <div className="container mx-auto px-4 py-10 sm:px-6 sm:py-12 md:py-16">
         <div className="mb-8">
-          <BrandMark />
-          <p className="mt-3 max-w-xl text-sm text-muted-foreground">
+          <BrandMark wordmarkClassName="text-white" />
+          <p className="mt-3 max-w-xl text-sm text-slate-400">
             REAL PT & Wellness — Physical and Aquatic Therapy. Clinical-grade SwimEx® pool in-house.
             PT, aquatic therapy, and recovery services; insurance when appropriate, plus cash and membership options.
           </p>
@@ -82,15 +82,15 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {LINK_GROUPS.map((group) => (
             <div key={group.title}>
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-200">
                 {group.title}
               </h3>
               <ul className="mt-4 space-y-2">
                 {group.links.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.href + link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-sm text-slate-400 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -102,8 +102,8 @@ export function Footer() {
         </div>
 
         {/* Social media */}
-        <div className="mt-10 pt-8 border-t border-border">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground">
+        <div className="mt-10 pt-8 border-t border-white/10">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-200">
             Follow us
           </h3>
           <ul className="mt-4 flex flex-wrap gap-4">
@@ -113,7 +113,7 @@ export function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
                   aria-label={item.label}
                 >
                   <item.icon className="h-5 w-5" aria-hidden />
@@ -124,17 +124,17 @@ export function Footer() {
         </div>
 
         {/* Trust signals & compliance */}
-        <div className="mt-10 pt-8 border-t border-border">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground mb-4">
+        <div className="mt-10 pt-8 border-t border-white/10">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-200 mb-4">
             Trust & compliance
           </h3>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             {TRUST_AND_COMPLIANCE.map((item) => (
               <li
                 key={item}
-                className="flex items-center gap-2 text-sm text-muted-foreground"
+                className="flex items-center gap-2 text-sm text-slate-400"
               >
-                <Check className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+                <Check className="h-4 w-4 shrink-0 text-cyan-400" aria-hidden />
                 {item}
               </li>
             ))}
@@ -142,8 +142,8 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-10 pt-8 border-t border-border">
-          <p className="text-center text-sm text-muted-foreground">
+        <div className="mt-10 pt-8 border-t border-white/10">
+          <p className="text-center text-sm text-slate-500">
             © {currentYear} REAL PT & Wellness. All rights reserved.
           </p>
         </div>
