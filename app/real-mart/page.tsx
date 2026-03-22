@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/sections/page-hero";
-import { RegenMart } from "@/components/sections/regen-mart";
+import { RealMartFull } from "@/components/sections/real-mart-full";
 import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "REAL Mart | REAL PT & Wellness",
   description:
-    "Shop supplements, recovery gear, and wellness products from REAL PT & Wellness.",
+    "America's premier health & wellness superstore — clinically validated products, unbeatable prices, and a shopping experience Amazon can't match.",
 };
 
 export default function RealMartPage() {
   return (
     <div className="brand-page">
-      <PageHero
-        title="REAL Mart"
-        description="Supplements, recovery gear, and wellness products to support your journey."
-      />
-      <RegenMart />
+      <RealMartFull />
       <Footer />
     </div>
   );
