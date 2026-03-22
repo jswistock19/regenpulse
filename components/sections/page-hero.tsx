@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import RisingLines from "@/components/canvas/rising-lines";
 import { GradientText } from "@/components/ui/gradient-text";
 
 type PageHeroProps = {
   title: string;
   description: string;
+  backgroundImage?: string;
 };
 
 const BRAND_COLORS = {
@@ -15,7 +17,7 @@ const BRAND_COLORS = {
   accent: "#6ca3cf",
 };
 
-export function PageHero({ title, description }: PageHeroProps) {
+export function PageHero({ title, description, backgroundImage }: PageHeroProps) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     const frame = requestAnimationFrame(() => setMounted(true));
@@ -24,22 +26,39 @@ export function PageHero({ title, description }: PageHeroProps) {
 
   return (
     <section className="relative min-h-[45vh] overflow-hidden border-b border-border bg-[linear-gradient(145deg,var(--brand-navy),color-mix(in_oklch,var(--brand-blue)_70%,var(--brand-navy)))] sm:min-h-[50vh] md:min-h-[55vh]">
-      {/* Rising lines background – brand colors */}
-      <div className="absolute inset-0 z-0">
-        {mounted ? (
-          <RisingLines
-            color={BRAND_COLORS.primary}
-            horizonColor={BRAND_COLORS.primary}
-            haloColor={BRAND_COLORS.light}
-            riseSpeed={0.08}
-            flowSpeed={0.15}
-            brightness={1.2}
-            className="h-full w-full"
+      {/* Background image (like homepage) */}
+      {backgroundImage && (
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={backgroundImage}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
           />
-        ) : (
-          <div className="h-full w-full bg-[var(--brand-navy)]" />
-        )}
-      </div>
+          <div className="absolute inset-0 bg-black/55" />
+        </div>
+      )}
+
+      {/* Rising lines background – brand colors (only when no image) */}
+      {!backgroundImage && (
+        <div className="absolute inset-0 z-0">
+          {mounted ? (
+            <RisingLines
+              color={BRAND_COLORS.primary}
+              horizonColor={BRAND_COLORS.primary}
+              haloColor={BRAND_COLORS.light}
+              riseSpeed={0.08}
+              flowSpeed={0.15}
+              brightness={1.2}
+              className="h-full w-full"
+            />
+          ) : (
+            <div className="h-full w-full bg-[var(--brand-navy)]" />
+          )}
+        </div>
+      )}
 
       {/* Content */}
       <div className="relative z-10 flex min-h-[45vh] flex-col items-center justify-center px-4 py-24 text-center sm:min-h-[50vh] sm:px-6 sm:py-28 md:min-h-[55vh] md:py-32">

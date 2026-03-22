@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "CLINIX Megabilling SaaS",
+  heroImage: "/images/services/clinix-saas.jpg",
   subtitle: "All-in-one clinic management, billing, and insurance matching platform for wellness providers.",
   overview: {
     heading: "The Operating System for Wellness Clinics",

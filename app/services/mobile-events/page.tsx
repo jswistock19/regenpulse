@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "Mobile Events",
+  heroImage: "/images/services/mobile-events.jpg",
   subtitle: "Bring REAL PT recovery and wellness technology to your event, team, or corporate campus.",
   overview: {
     heading: "Recovery On the Move",

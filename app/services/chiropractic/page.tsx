@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "Y-Strap Chiropractic & Manual Therapy",
+  heroImage: "/images/services/chiropractic.jpg",
   subtitle: "Spinal decompression, Y-strap adjustments, and advanced manual therapy for pain relief.",
   overview: {
     heading: "Precision Chiropractic Care",

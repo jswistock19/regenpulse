@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "Member Community Platform",
+  heroImage: "/images/services/member-community.png",
   subtitle: "Connect, share, and grow with the REAL PT member community and wellness network.",
   overview: {
     heading: "Your Wellness Community",

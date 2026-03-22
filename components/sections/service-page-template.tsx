@@ -13,6 +13,7 @@ import {
 export type ServicePageData = {
   title: string;
   subtitle: string;
+  heroImage?: string;
   overview: {
     heading: string;
     description: string;
@@ -46,7 +47,7 @@ export type ServicePageData = {
 export function ServicePageTemplate({ data }: { data: ServicePageData }) {
   return (
     <div className="brand-page min-h-screen overflow-x-hidden">
-      <PageHero title={data.title} description={data.subtitle} />
+      <PageHero title={data.title} description={data.subtitle} backgroundImage={data.heroImage} />
 
       {/* Overview Section */}
       <section className="bg-neutral-950 py-16 sm:py-20">

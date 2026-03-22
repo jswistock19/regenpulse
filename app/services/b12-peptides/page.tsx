@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "B12 & Peptide Programs",
+  heroImage: "/images/services/b12-peptides.jpg",
   subtitle: "B12 injections and peptide therapy for energy, metabolism, healing, and anti-aging.",
   overview: {
     heading: "Peptide & B12 Optimization",

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "Medicare Home Health PT & OT",
+  heroImage: "/images/services/medicare-home-health.jpg",
   subtitle: "In-home physical and occupational therapy covered by Medicare Part A & Part B.",
   overview: {
     heading: "Comprehensive Home Health Services",

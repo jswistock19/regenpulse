@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "SYMMETRY Neuro-Pathway Training",
+  heroImage: "/images/services/symmetry-neuro-therapy.jpg",
   subtitle: "Drug-free neurofeedback and brainwave training powered by our partner SYMMETRY Neuro-Pathway Training.",
   overview: {
     heading: "Advanced Neurofeedback & Brainwave Training",

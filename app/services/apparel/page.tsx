@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "Branded Apparel & Gear",
+  heroImage: "/images/services/apparel.jpg",
   subtitle: "Performance wear and recovery gear built for the REAL lifestyle.",
   overview: {
     heading: "Wear the Brand",

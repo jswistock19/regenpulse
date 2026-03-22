@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "Cryotherapy",
+  heroImage: "/images/services/cryotherapy.jpeg",
   subtitle: "Whole-body and localized cryotherapy for inflammation, recovery, and performance.",
   overview: {
     heading: "Clinical Cryotherapy",

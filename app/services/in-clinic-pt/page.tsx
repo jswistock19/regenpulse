@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "In-Clinic Physical Therapy",
+  heroImage: "/images/services/in-clinic-pt.jpeg",
   subtitle: "Evidence-based outpatient physical therapy with advanced technology integration.",
   overview: {
     heading: "Advanced Outpatient Physical Therapy",

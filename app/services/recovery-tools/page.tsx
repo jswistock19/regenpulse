@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "Recovery Tools",
+  heroImage: "/images/services/recovery-tools.jpg",
   subtitle: "Professional-grade recovery equipment available for home use through REAL Mart.",
   overview: {
     heading: "Pro-Grade Recovery at Home",

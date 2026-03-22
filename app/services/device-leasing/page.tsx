@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const PAGE_DATA: ServicePageData = {
   title: "Device Leasing & E-Commerce",
+  heroImage: "/images/services/device-leasing.jpg",
   subtitle: "Lease clinical-grade wellness equipment or purchase through REAL Mart for your facility.",
   overview: {
     heading: "Equip Your Facility",
